@@ -14,8 +14,7 @@ export class CategoryMenu {
   @Output() selected = new EventEmitter<Category>();
 
   selectedId: number | null = null;
-  onCategorySelected(category: Category) {
-    this.selectedId = category.id;
-    this.selected.emit(category);
+  onCategorySelected(id: number) {
+    this.selectedId = id;
   }
 }

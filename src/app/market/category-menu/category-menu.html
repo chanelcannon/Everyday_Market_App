@@ -4,10 +4,10 @@
   }
   <div class="categories-grid">
     @for (category of categories; track category) {
-    <app-category-menu-item
-      [category]="category"
-      (selected)="onCategorySelected(category)">
-    </app-category-menu-item>
+      <app-category-menu-item
+        [category]="category"
+        (selected)="onCategorySelected(category.id)">
+      </app-category-menu-item>
     }
   </div>
 </div>
