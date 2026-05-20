@@ -6,6 +6,8 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 This project was created using the help of GitHub Copilot AI Assistant.
 
+Space pattern found at: [https://pixabay.com/vectors/space-astronomy-spaceships-5654794/](https://pixabay.com/vectors/space-astronomy-spaceships-5654794/)
+
 ## Introduction
 An "Everyday Market App" application made using Angular and Angular CLI to show use of components, data binding (specifically property and event binding), managment of state and component interaction (using @Input(), @Output, and EventEmitter), and application of Angular control flow syntax (using @for and @if).
 
