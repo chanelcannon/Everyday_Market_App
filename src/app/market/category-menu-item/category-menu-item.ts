@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Category } from '../models/category';
 
 @Component({
@@ -8,9 +8,11 @@ import { Category } from '../models/category';
   styleUrl: './category-menu-item.css',
 })
 export class CategoryMenuItem {
-  category = input.required<Category>();
-  selected = output<number>();
-  onSelect() {
-    this.selected.emit(this.category().id);
+  
+  @Input() categoryName: string = '';
+  @Output() click = new EventEmitter<string>();
+
+  onItemClick() {
+    this.click.emit(this.categoryName);
   }
 }

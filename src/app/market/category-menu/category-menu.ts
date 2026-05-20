@@ -13,9 +13,8 @@ export class CategoryMenu {
   @Input() categories: Category[] = [];
   @Output() selected = new EventEmitter<Category>();
 
-  selectedId: number | null = null;
-  
-  onCategorySelected(id: number) {
-    this.selectedId = id;
+  selectedName: string | null = null;
+  onCategorySelected(name: string) {
+    this.selectedName = name;
   }
 }

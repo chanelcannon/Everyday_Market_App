@@ -10,10 +10,10 @@ import { CategoryMenu } from '../category-menu/category-menu';
 })
 export class ProductsPage {
   categories: Category[] = [
-    { id: 1, name: 'Space'},
-    { id: 2, name: 'Dogs'},
-    { id: 3, name: 'Video Games'},
-    { id: 4, name: 'Food'},
-    { id: 5, name: 'Plants'},
+    { name: 'Space'},
+    { name: 'Dogs'},
+    { name: 'Video Games'},
+    { name: 'Food'},
+    { name: 'Plants'},
   ];
 }
