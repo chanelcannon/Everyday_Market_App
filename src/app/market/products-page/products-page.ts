@@ -16,4 +16,9 @@ export class ProductsPage {
     { name: 'Food'},
     { name: 'Plants'},
   ];
+
+  selectedName: string = '';
+  onCategorySelected(name: string) {
+    this.selectedName = name;
+  }
 }

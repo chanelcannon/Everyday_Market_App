@@ -11,10 +11,9 @@ import { Category } from '../models/category';
 })
 export class CategoryMenu {
   @Input() categories: Category[] = [];
-  @Output() selected = new EventEmitter<Category>();
+  @Output() selectedName = new EventEmitter<string>();
 
-  selectedName: string | null = null;
   onCategorySelected(name: string) {
-    this.selectedName = name;
+    this.selectedName.emit(name);
   }
 }
