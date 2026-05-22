@@ -1,8 +1,8 @@
 <div class="category-menu">
   <h2>Category Menu</h2>
   <div class="selected-category">
-    @if (selectedName) {
-    <p>Category Selected: {{ selectedName }}</p>
+    @if (selectedCategory) {
+    <p>Category Selected: {{ selectedCategory }}</p>
     }
   </div>
   <div class="categories-grid">
@@ -11,7 +11,7 @@
       <li>
         <app-category-menu-item
           [categoryName]="category.name"
-          (click)="onCategorySelected(category.name)">
+          (selected)="onCategorySelected(category.name)">
         </app-category-menu-item>
       </li>
     }

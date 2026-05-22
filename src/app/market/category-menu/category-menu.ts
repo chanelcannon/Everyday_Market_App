@@ -10,10 +10,13 @@ import { Category } from '../models/category';
   styleUrl: './category-menu.css',
 })
 export class CategoryMenu {
+  
   @Input() categories: Category[] = [];
-  @Output() selectedName = new EventEmitter<string>();
+  @Output() selected = new EventEmitter<string>();
 
+  selectedCategory = '';
   onCategorySelected(name: string) {
-    this.selectedName.emit(name);
+    this.selected.emit(name);
+    this.selectedCategory = name;
   }
 }
