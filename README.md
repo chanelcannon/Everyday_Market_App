@@ -104,6 +104,18 @@ ng serve
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`.
 
+### Build
+Create a production build
+```bash
+ng build
+```
+
+### Test
+Run the unit tests
+```bash
+ng test
+```
+
 ### Home Page
 Once you have navigated to the local server, the application will load the `Home` page:
 ![Image of Testing Home Page](public/testing/Assignment1_Testing_HomePage.png)
