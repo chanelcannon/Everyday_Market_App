@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { countryValidator } from '../../validators/registration-validators/registration-validators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register-page',
@@ -11,6 +12,8 @@ import { countryValidator } from '../../validators/registration-validators/regis
 
 export class RegisterPage {
   formbuilder = inject(FormBuilder);
+
+  router = inject(Router);
 
   registerForm: FormGroup = this.formbuilder.group({
       userName: ['', [
@@ -51,6 +54,7 @@ export class RegisterPage {
         alert('Thank you for registering, ' +
         this.registerForm.value.userName);
         this.registerForm.reset();
+        this.router.navigate(['/products']);
       }
     }
 }
