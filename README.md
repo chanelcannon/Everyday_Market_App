@@ -1,12 +1,14 @@
-# Module 1 Assignment: Everyday Market App - Angular
+# Everyday Market App - Angular
 by Chanel Cannon
-completed May 20, 2026
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.11.
 
 This project was created using the help of GitHub Copilot AI Assistant.
 
 Space pattern found at: [https://pixabay.com/vectors/space-astronomy-spaceships-5654794/](https://pixabay.com/vectors/space-astronomy-spaceships-5654794/)
+
+# Module 1 Assignment
+completed May 20, 2026
 
 ## Introduction
 An "Everyday Market App" application made using Angular and Angular CLI to show use of components, data binding (specifically property and event binding), managment of state and component interaction (using @Input(), @Output, and EventEmitter), and application of Angular control flow syntax (using @for and @if).
@@ -134,11 +136,22 @@ You can then test the Event tracking by parent `Category Menu` of child `Categor
 ## References
 I used the instructions from Practice Activities 1, 2, and 3 extensively. They were extremely helpful!
 
-## PS
-### 1
-I realized in my screenshots I had a bookmark bar item that contained a strange link, rather than remove it and redo the screenshots, I decided to include the link here in hopes you enjoy:
-[`F*ck That: An Honest Meditation` by Jason Headley](https://vimeo.com/132790897)
-***Note: that this contains many swears
+## Assignment 3 Updates
 
-### 2 🧋
-I also enjoy homemade fruit juice bubble tea with popping bubbles (and my husband, milk tea with tapioca pearls)! We make it at home now too to save money 😊
+### Intro
+Build on your Assignment 1 project by adding routing and a validated registration form.
+
+### Update Dependencies
+updated packages via
+```bash
+npm update
+```
+
+This added 1 package and updated 41 packages.
+
+### References
+[HTML <input> type Attribute](https://www.w3schools.com/tags/att_input_type.asp)
+[HTML Form Elements](https://www.w3schools.com/html/html_form_elements.asp)
+
+
+

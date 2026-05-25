@@ -1,0 +1,36 @@
+label {
+  display: inline;
+  margin: 0 5px 0 0;
+}
+
+input[type="email"], input[type="tel"], input[type="text"] {
+  height: 1rem;
+  width: 200px;
+}
+
+input[type="checkbox"] {
+  accent-color: #137918;
+}
+
+.register-form {
+  padding: 20px;
+  border: 1px solid #000000;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-element-group {
+  text-align: left;
+  margin: 10px;
+}
+
+.error {
+  text-align: left;
+  color: red;
+  font-size: 0.9em;
+}
+
+.invalid {
+  border: 1px solid red;
+  border-radius: 2px;
+}
