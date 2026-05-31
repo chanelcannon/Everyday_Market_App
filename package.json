@@ -10,8 +10,8 @@
     "lint": "ng lint"
   },
   "engines": {
-    "node": "20.x"
-  }
+    "node": "24.x"
+  },
   "private": true,
   "packageManager": "npm@11.6.2",
   "dependencies": {
