@@ -41,6 +41,7 @@ Space pattern found at: [https://pixabay.com/vectors/space-astronomy-spaceships-
       - Submit Alert and Routing
       - Form Validation
   - References
+- [Module_4_Assignment](#Module_4_Assignment)
 
 # Module_1_Assignment
 completed May 20, 2026
@@ -366,5 +367,116 @@ an acceptable input.
 - [HTML <input> type Attribute](https://www.w3schools.com/tags/att_input_type.asp)
 - [HTML Form Elements](https://www.w3schools.com/html/html_form_elements.asp)
 
+
+
+
+
+
+
+# Module_4_Assignment
+
+## Introduction
+Deploying Module 3 Assignment as an Azure static Web App, executing CI/CD pipeline via GitHub Actions.
+
+## Requirements
+[My Deployed Azure App](https://red-tree-0b91ba210.7.azurestaticapps.net)
+
+### For editing/ viewing code:
+- GitHub
+- Azure
+
+## Deploying the Angular App
+### 1. GitHub Repository
+I had previously set up Assignment 3 as a GitHub repository so this step was already done :)
+
+### 2. Create a Production Environment on Microsoft Azure
+Following Microsoft's Quickstart Guide (see references), with GitHub as the code hosting platform, I created a `Static Web App`. 
+
+I was slightly confused and set up the `App Location` as `/src/app`, assuming the base of the app was `app`, and `Output Location` as `dist/angular-basic`, forgetting to change this from the guide for my own project.
+
+Despite these big issues, the workflow showed that it had `Succeeded`. The site page showed absolutely blank with no errors.
+![Image of Early Deployment Attempt](public/deploying/Assignment4_Deploying_BlankPage)
+
+### 3. Set Up GitHub Actions for CI/CD
+After setting up the production environment via Azure, GitHub Actions was automatically set up. Every change committed to the repository triggered a workflow.
+
+In GitHub `Actions` I went to the succesful workflow and saw two issues: 
+- A warning saying "Node.js 20 actions are deprecated"
+- And red text under Build and Deploy saying "Could not detect any platform in the source directory. Error: Could not detect the language from repo."
+
+I googled the first issue then I went to the workflow setup doc `azure-static-web-apps-red-tree-0b91ba210.yml` and added in the suggested code to load the newwer version of node. This did not work and I later removed this.
+
+I googled the second one, and it said that my `app_location` and/ or `output location` were wrong. Refering to the `Deploying to Azure Static Web App` article (see references), I went to the workflow setup doc and found where to update the mistakes I had made earlier. `app_location`, which I changed wrongly to `/src` thinking the file containing `Index.html` was what was needed. And still misunderstanding the requirement for `output location` I changed it to `dist/Everyday_Market_App_A3/browser`.
+
+Still the page was blank.
+
+I attempted to use CoPilot to determine what I was missing. Through it's suggestion, I changed the `output location` to the proper name of the app found in `angular.json`, plus the "/browser" shown in the assignment instructions: `dist/Everyday_Market_App/browser`.
+
+Still the page was blank.
+
+Using CoPilot, Google, the suggested docs, and the synch session, I made many small changes attempting to determine my issue. Nothing worked and an hour later I sent an email requesting help from the prof, Joanne Hoar. I continued to make small changes (and took a chips and salsa break) until I heard back.
+
+Joanne noted that thought the app is deploying, the `<app-root></app-root>` is empty meaning angular isnt working. She suggested to check that the `output location` in `angular.json` matches the one in the workflow setup. She also suggested needing a navigation fallback to help with any routing issues, giving the example code for a file called `staticwebapp.config.json`:
+```json
+{
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  }
+}
+```
+
+In `angular.json` there was no `output location` so I googled where it should go in the file structure and added it, matching the one in the webflow setup file: `dist/Everyday_Market_App_A3/browser` (this would later prove to be a bit wrong).
+
+Still the page was blank so I tried the second suggestion. After a few syntax errors, I could see the workflow was succeeding to read the config file. But still no luck!
+
+I looked up Joanne's sample workflow setup file and noticed that she had set the `app location` as `/`. I made this change in my file and, though the workflow did not succeed, this was the first time I saw that the app had been built in the workflow:
+
+![Image of Workflow showing Build](public/deploying/Assignment4_Deploying_WorkflowBuiltButFailed)
+
+I knew I was on the right track!
+
+Still the page was blank, so I made small changes here and there to see what syntax I had wrong. Nothing.
+
+Finally I double checked `angular.json` and removed the "/browser". It worked!
+
+![Image of Workflows showing final succesful workflow](public/deploying/Assignment4_Deploying_TheWorkflows)
+
+### 4. Deploy Your Angular App
+The app deployed succesfully: 
+
+![Image of Deployed App](public/deploying/Assignment4_Deploying_DeployedApp)
+
+And was publicly accesible (shown here on a different browser where I was not logged into Azure):
+
+![Image of Deployed App on Microsoft Edge](public/deploying/Assignment4_Deploying_DeployedAppOnEdge)
+
+#### I then tested the functions of the site:
+The form successfully filled and submitted:
+
+![Image of Deployed App Form Successfully Submitted](public/deploying/Assignment4_Deploying_FormSubmitted)
+
+The form validations:
+
+![Image of Deployed App Form Validators](public/deploying/Assignment4_Deploying_FormValidations)
+
+The auto routing to `Products Page` after form submission as well as via the nav bar and home pgae button:
+
+![Image of Deployed App Products Page](public/deploying/Assignment4_Deploying_DeployedProductsPage)
+
+The `Products Page` Click event:
+
+![Image of Deployed App Products Page Click Event](public/deploying/Assignment4_Deploying_DeployedProductsPageClick)
+
+The `Home Page`:
+
+![Image of Deployed App Home Page](public/deploying/Assignment4_Deploying_DeployedHomePage)
+
+### Other Notes
+
+
+
+## References
+[Quickstart: Build your first static web app](https://learn.microsoft.com/en-us/azure/static-web-apps/get-started-portal?tabs=angular&pivots=github)
+[Deploying to Azure Static Web App](https://docs.github.com/en/actions/how-tos/deploy/deploy-to-third-party-platforms/azure-static-web-app)
 
 
