@@ -431,7 +431,7 @@ Still the page was blank so I tried the second suggestion. After a few syntax er
 
 I looked up Joanne's sample workflow setup file and noticed that she had set the `app location` as `/`. I made this change in my file and, though the workflow did not succeed, this was the first time I saw that the app had been built in the workflow:
 
-![Image of Workflow showing Build](public/deploying/Assignment4_Deploying_WorkflowBuiltButFailed)
+![Image of Workflow showing Build](public/deploying/Assignment4_Deploying_WorkflowBuiltButFailed.png)
 
 I knew I was on the right track!
 
@@ -439,37 +439,37 @@ Still the page was blank, so I made small changes here and there to see what syn
 
 Finally I double checked `angular.json` and removed the "/browser". It worked!
 
-![Image of Workflows showing final succesful workflow](public/deploying/Assignment4_Deploying_TheWorkflows)
+![Image of Workflows showing final succesful workflow](public/deploying/Assignment4_Deploying_TheWorkflows.png)
 
 ### 4. Deploy Your Angular App
 The app deployed succesfully: 
 
-![Image of Deployed App](public/deploying/Assignment4_Deploying_DeployedApp)
+![Image of Deployed App](public/deploying/Assignment4_Deploying_DeployedApp.png)
 
 And was publicly accesible (shown here on a different browser where I was not logged into Azure):
 
-![Image of Deployed App on Microsoft Edge](public/deploying/Assignment4_Deploying_DeployedAppOnEdge)
+![Image of Deployed App on Microsoft Edge](public/deploying/Assignment4_Deploying_DeployedAppOnEdge.png)
 
 #### I then tested the functions of the site:
 The form successfully filled and submitted:
 
-![Image of Deployed App Form Successfully Submitted](public/deploying/Assignment4_Deploying_FormSubmitted)
+![Image of Deployed App Form Successfully Submitted](public/deploying/Assignment4_Deploying_FormSubmitted.png)
 
 The form validations:
 
-![Image of Deployed App Form Validators](public/deploying/Assignment4_Deploying_FormValidations)
+![Image of Deployed App Form Validators](public/deploying/Assignment4_Deploying_FormValidations.png)
 
 The auto routing to `Products Page` after form submission as well as via the nav bar and home pgae button:
 
-![Image of Deployed App Products Page](public/deploying/Assignment4_Deploying_DeployedProductsPage)
+![Image of Deployed App Products Page](public/deploying/Assignment4_Deploying_DeployedProductsPage.png)
 
 The `Products Page` Click event:
 
-![Image of Deployed App Products Page Click Event](public/deploying/Assignment4_Deploying_DeployedProductsPageClick)
+![Image of Deployed App Products Page Click Event](public/deploying/Assignment4_Deploying_DeployedProductsPageClick.png)
 
 The `Home Page`:
 
-![Image of Deployed App Home Page](public/deploying/Assignment4_Deploying_DeployedHomePage)
+![Image of Deployed App Home Page](public/deploying/Assignment4_Deploying_DeployedHomePage.png)
 
 ### Other Notes
 
