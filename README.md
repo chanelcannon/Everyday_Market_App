@@ -395,7 +395,7 @@ Following Microsoft's Quickstart Guide (see references), with GitHub as the code
 I was slightly confused and set up the `App Location` as `/src/app`, assuming the base of the app was `app`, and `Output Location` as `dist/angular-basic`, forgetting to change this from the guide for my own project.
 
 Despite these big issues, the workflow showed that it had `Succeeded`. The site page showed absolutely blank with no errors.
-![Image of Early Deployment Attempt](public/deploying/Assignment4_Deploying_BlankPage)
+![Image of Early Deployment Attempt](public/deploying/Assignment4_Deploying_BlankPage.png)
 
 ### 3. Set Up GitHub Actions for CI/CD
 After setting up the production environment via Azure, GitHub Actions was automatically set up. Every change committed to the repository triggered a workflow.
@@ -472,11 +472,12 @@ The `Home Page`:
 ![Image of Deployed App Home Page](public/deploying/Assignment4_Deploying_DeployedHomePage.png)
 
 ### Other Notes
-
+Also added linter to workflow setup.
 
 
 ## References
-[Quickstart: Build your first static web app](https://learn.microsoft.com/en-us/azure/static-web-apps/get-started-portal?tabs=angular&pivots=github)
-[Deploying to Azure Static Web App](https://docs.github.com/en/actions/how-tos/deploy/deploy-to-third-party-platforms/azure-static-web-app)
+- Module 4 Practice Activity 2
+- [Quickstart: Build your first static web app](https://learn.microsoft.com/en-us/azure/static-web-apps/get-started-portal?tabs=angular&pivots=github)
+- [Deploying to Azure Static Web App](https://docs.github.com/en/actions/how-tos/deploy/deploy-to-third-party-platforms/azure-static-web-app)
 
 
