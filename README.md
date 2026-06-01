@@ -42,7 +42,16 @@ Space pattern found at: [https://pixabay.com/vectors/space-astronomy-spaceships-
       - Form Validation
   - References
 - [Module_4_Assignment](#Module_4_Assignment)
-
+  - Introduction
+  - Requirements
+  - Deploying the Angular App
+    - Set Up a GitHub Repository for Your Angular App
+    - Create a Production Environment on Microsoft Azure
+    - Set Up GitHub Actions for CI/CD
+    - Deploy Your Angular App
+    - Other Notes
+  - References
+ 
 # Module_1_Assignment
 completed May 20, 2026
 
@@ -379,14 +388,15 @@ an acceptable input.
 Deploying Module 3 Assignment as an Azure static Web App, executing CI/CD pipeline via GitHub Actions.
 
 ## Requirements
-[My Deployed Azure App](https://red-tree-0b91ba210.7.azurestaticapps.net)
+### My Deplyed Azure App
+[https://red-tree-0b91ba210.7.azurestaticapps.net](https://red-tree-0b91ba210.7.azurestaticapps.net)
 
 ### For editing/ viewing code:
 - GitHub
 - Azure
 
 ## Deploying the Angular App
-### 1. GitHub Repository
+### 1. Set Up a GitHub Repository for Your Angular App
 I had previously set up Assignment 3 as a GitHub repository so this step was already done :)
 
 ### 2. Create a Production Environment on Microsoft Azure
@@ -395,6 +405,7 @@ Following Microsoft's Quickstart Guide (see references), with GitHub as the code
 I was slightly confused and set up the `App Location` as `/src/app`, assuming the base of the app was `app`, and `Output Location` as `dist/angular-basic`, forgetting to change this from the guide for my own project.
 
 Despite these big issues, the workflow showed that it had `Succeeded`. The site page showed absolutely blank with no errors.
+
 ![Image of Early Deployment Attempt](public/deploying/Assignment4_Deploying_BlankPage.png)
 
 ### 3. Set Up GitHub Actions for CI/CD
@@ -429,7 +440,7 @@ In `angular.json` there was no `output location` so I googled where it should go
 
 Still the page was blank so I tried the second suggestion. After a few syntax errors, I could see the workflow was succeeding to read the config file. But still no luck!
 
-I looked up Joanne's sample workflow setup file and noticed that she had set the `app location` as `/`. I made this change in my file and, though the workflow did not succeed, this was the first time I saw that the app had been built in the workflow:
+I looked up Joanne's sample workflow setup file and noticed that she had set the `app location` as `/`. I realized that the buidler is looking for `angular.json`, not `index.html`. I made this change in my file and, though the workflow did not succeed, this was the first time I saw that the app had been built in the workflow:
 
 ![Image of Workflow showing Build](public/deploying/Assignment4_Deploying_WorkflowBuiltButFailed.png)
 
@@ -459,7 +470,7 @@ The form validations:
 
 ![Image of Deployed App Form Validators](public/deploying/Assignment4_Deploying_FormValidations.png)
 
-The auto routing to `Products Page` after form submission as well as via the nav bar and home pgae button:
+The auto routing to `Products Page` after form submission as well as via the nav bar and home page button:
 
 ![Image of Deployed App Products Page](public/deploying/Assignment4_Deploying_DeployedProductsPage.png)
 
