@@ -483,8 +483,11 @@ The `Home Page`:
 ![Image of Deployed App Home Page](public/deploying/Assignment4_Deploying_DeployedHomePage.png)
 
 ### Other Notes
-Also added linter to workflow setup.
+Here is a screenshot of my Static Web App configuration on the Azure portal:
 
+![Image of Azure Static Web App configuration](public/deploying/Assignment4_Deploying_AzureConfiguration.png)
+
+Also added linter to workflow setup.
 
 ## References
 - Module 4 Practice Activity 2
